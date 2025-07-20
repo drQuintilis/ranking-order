@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tierlist Maker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tierlist Maker</h1>
+
+      <div class="actions">
+        <button id="save-btn">Save Tierlist</button>
+        <button id="load-btn">Load Tierlist</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+
+      <div class="tierlist">
+        <div class="tier" data-tier="S">
+          <div class="tier-label">S</div>
+          <div class="tier-items" id="tier-s"></div>
+        </div>
+        <div class="tier" data-tier="A">
+          <div class="tier-label">A</div>
+          <div class="tier-items" id="tier-a"></div>
+        </div>
+        <div class="tier" data-tier="B">
+          <div class="tier-label">B</div>
+          <div class="tier-items" id="tier-b"></div>
+        </div>
+        <div class="tier" data-tier="C">
+          <div class="tier-label">C</div>
+          <div class="tier-items" id="tier-c"></div>
+        </div>
+        <div class="tier" data-tier="D">
+          <div class="tier-label">D</div>
+          <div class="tier-items" id="tier-d"></div>
+        </div>
+        <div class="tier" data-tier="F">
+          <div class="tier-label">F</div>
+          <div class="tier-items" id="tier-f"></div>
+        </div>
+      </div>
+
+      <div class="unranked-container">
+        <h2>Unranked Items</h2>
+        <div id="unranked-items" class="tier-items"></div>
+      </div>
+
+      <div class="instructions">
+        <h3>How to use:</h3>
+        <ol>
+          <li>Drag items from the unranked section to any tier</li>
+          <li>Move items between tiers as needed</li>
+          <li>Save your tierlist using the Save button</li>
+          <li>Load a previously saved tierlist with the Load button</li>
+          <li>Reset the tierlist with the Reset button</li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

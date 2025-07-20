@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#reset-btn {
+  background-color: #f44336;
+}
+
+#reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+.tierlist {
+  margin-bottom: 30px;
+}
+
+.tier {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tier-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.tier[data-tier="S"] .tier-label {
+  background-color: #ff7f7f;
+}
+.tier[data-tier="A"] .tier-label {
+  background-color: #ffbf7f;
+}
+.tier[data-tier="B"] .tier-label {
+  background-color: #ffdf7f;
+}
+.tier[data-tier="C"] .tier-label {
+  background-color: #ffff7f;
+}
+.tier[data-tier="D"] .tier-label {
+  background-color: #bfff7f;
+}
+.tier[data-tier="F"] .tier-label {
+  background-color: #7f7fff;
+}
+
+.tier-items {
+  flex-grow: 1;
+  min-height: 60px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #f9f9f9;
+}
+
+.item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.unranked-container {
+  margin-bottom: 30px;
+}
+
+.unranked-container h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.instructions {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.instructions h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.instructions ol {
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .tier {
+    flex-direction: column;
+  }
+
+  .tier-label {
+    width: 100%;
+    padding: 5px 0;
+  }
+}
